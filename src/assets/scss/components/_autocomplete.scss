@@ -1,10 +1,6 @@
-.invalid-text {
-  display: block;
-  color: $form-feedback-invalid-color;
-}
-
-.form-select-clear {
-    position: absolute;
-    right: $form-select-indicator-padding;
-    background-size: $form-select-bg-size;
+.autocomplete-menu {
+  width: 100%;
+  height: auto;
+  max-height: 208px;
+  overflow: auto;
 }
