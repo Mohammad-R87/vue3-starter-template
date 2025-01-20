@@ -30,6 +30,10 @@ function isEmpty(value) {
     return value === undefined || value === null || value === '';
 }
 
+function hasNullObject(object) {
+    return Object.values(object).some((value) => isEmpty(value));
+}
+
 function isWritableFormElement(type) {
     return /^(?:text|email|number|search|tel|url|password)$/i.test(type);
 }
@@ -118,6 +122,7 @@ export {
     isObject,
     isEmptyObject,
     isEmpty,
+    hasNullObject,
     isWritableFormElement,
     getUniqueId,
     resolveIteratee,
