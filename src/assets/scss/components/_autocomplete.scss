@@ -1,6 +1,22 @@
-.autocomplete-menu {
-  width: 100%;
-  height: auto;
-  max-height: 208px;
-  overflow: auto;
+.autocomplete {
+  &-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &-menu {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    max-height: 208px;
+    overflow: auto;
+  }
+
+  &-clear {
+    position: absolute;
+    right: $input-btn-padding-x-sm;
+    background-size: $form-select-bg-size;
+  }
 }
+

@@ -8,14 +8,14 @@
             <slot name="label"></slot>
         </label>
 
-        <div :class="inputClassNames">
+        <div class="autocomplete-input">
             <input
                 v-model="value"
                 type="text"
                 :id="id"
                 :disabled="disabled"
                 :placeholder="placeholder"
-                class="form-reset flex-fill"
+                :class="inputClassNames"
                 autocomplete="off"
                 @input="onInput(value)"
                 @focus="onFocus"
@@ -24,7 +24,7 @@
             <button
                 v-if="clearable && !isEmpty(modelValue)"
                 type="button"
-                class="btn-close"
+                class="autocomplete-clear btn-close"
                 @click="clearItem"
             />
         </div>
@@ -168,7 +168,6 @@
 
             const inputClassNames = computed(() => {
                 return [
-                    'd-flex',
                     'form-control',
                     `form-control-${props.size}`,
 
