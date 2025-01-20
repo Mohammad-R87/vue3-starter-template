@@ -16,7 +16,7 @@ class DateTime {
     // Static
 
     static make(timestamp) {
-        return new DateTime(timestamp);
+        return new DateTime(timestamp).jalali();
     }
 
     static today() {
@@ -46,6 +46,8 @@ class DateTime {
             default:
                 throw new TypeError(`Unexpected calendar name "${calendar}".`);
         }
+
+        return this;
     }
 
     gregorian() {
@@ -101,8 +103,24 @@ class DateTime {
         return this._date.getDay();
     }
 
+    setDay(day) {
+        return this._date.setDay(day);
+    }
+
     getMonth() {
         return this._date.getMonth();
+    }
+
+    setMonth(month) {
+        return this._date.setMonth(month);
+    }
+
+    getYear() {
+        return this._date.getYear();
+    }
+
+    setYear(year) {
+        return this._date.setYear(year);
     }
 
     dayOfWeek() {
@@ -128,6 +146,16 @@ class DateTime {
 
     subMonth(count) {
         this._date.subMonth(count);
+        return this;
+    }
+
+    addYear(count) {
+        this._date.addYear(count);
+        return this;
+    }
+
+    subYear(count) {
+        this._date.subYear(count);
         return this;
     }
 
@@ -183,6 +211,16 @@ class DateTime {
 
     endOfMonth() {
         this._date.endOfMonth();
+        return this;
+    }
+
+    startOfYear() {
+        this._date.startOfYear();
+        return this;
+    }
+
+    endOfYear() {
+        this._date.endOfYear();
         return this;
     }
 }
