@@ -1,0 +1,27 @@
+.dropdown-date-picker {
+
+  &-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &-day {
+    .form-control {
+      @include border-end-radius(0);
+    }
+  }
+
+  &-month {
+    .form-control {
+      border-left: none;
+      border-right: none;
+      @include border-radius(0);
+    }
+  }
+
+  &-year {
+    .form-control {
+      @include border-start-radius(0);
+    }
+  }
+}

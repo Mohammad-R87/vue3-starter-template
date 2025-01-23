@@ -34,4 +34,7 @@ export default {
     "Dark": "Dark",
     "System": "System",
     "Settings": "Settings",
+    "Day": "Day",
+    "Month": "Month",
+    "Year": "Year"
 };

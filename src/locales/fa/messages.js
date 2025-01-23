@@ -34,4 +34,7 @@ export default {
     "Dark": "تیره",
     "System": "سیستم",
     "Settings": "تنظیمات",
+    "Day": "روز",
+    "Month": "ماه",
+    "Year": "سال"
 };
