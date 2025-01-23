@@ -161,6 +161,11 @@ class DateTime {
 
     // Difference
 
+    age(instance) {
+        const newInstance = Pasoonate.make(instance.getTimestamp());
+        return this._date.age(newInstance);
+    }
+
     diffInDays(instance) {
         const diffInSeconds = instance.getTimestamp() - this.getTimestamp();
 
